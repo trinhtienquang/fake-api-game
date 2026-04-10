@@ -76,9 +76,9 @@ app.post("/api/character", (req, res) => {
  * =========================
  */
 app.post("/api/transaction/create", (req, res) => {
-  const { character_id, server_id, amount } = req.body;
+  const { character_id, server_id, recharge_package_id } = req.body;
 
-  if (!character_id || !server_id || !amount) {
+  if (!character_id || !server_id || !recharge_package_id) {
     return res.status(400).json({ error: "Missing params" });
   }
 
@@ -100,7 +100,7 @@ app.post("/api/transaction/create", (req, res) => {
     transaction_id,
     character_id,
     server_id,
-    amount,
+    recharge_package_id,
     status: "PENDING",
     created_at: new Date()
   };
