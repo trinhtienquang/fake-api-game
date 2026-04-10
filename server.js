@@ -135,6 +135,6 @@ app.get("/api/transaction/:id", (req, res) => {
  * RUN SERVER
  * =========================
  */
-app.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
+app.listen(3333, () => {
+  console.log("Server running at http://192.168.1.43:3333");
 });
